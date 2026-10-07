@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "Proyecto ULima.slnx"
+    "dotnet.defaultSolution": "Proyecto-ULima-Sebastian.slnx"
 }
