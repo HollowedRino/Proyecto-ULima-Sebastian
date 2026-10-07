@@ -54,17 +54,19 @@ public class PlayerMoveTopDown : MonoBehaviour
         {
             // Acá sería el caso en que se esté moviendo, que significa que tenemos que decirle qué velocidad tiene
             estaCorriendo = true;
-            if (direction.x == 1)
+            if (direction.x > 0.1)
             {
                 // Como estoy yendo a la derecha, no lo flipeo en x porque es la posición original
                 sprite.flipX = false;
             }
-            else if (direction.x == -1)
+            else if (direction.x < -0.1)
             {
                 // Como estoy yendo a la izquierda, lo flipeo en x para que voltee a la izquierda
                 sprite.flipX = true;
             }
         }
-        anim.SetBool("estaCorriendo", estaCorriendo);
+        // Si no hay animación no llama al bool
+        if (anim != null)
+            anim.SetBool("estaCorriendo", estaCorriendo);
     } 
 }
